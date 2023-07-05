@@ -1,0 +1,18 @@
+{
+  "name": "Hive Icon to Dollar Sign",
+  "version": "0.1",
+  "description": "Changes PeakD's potential payout's icon from HIVE to a dollar sign.",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "https://i.imgur.com",
+    "https://peakd.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://peakd.com/*"],
+      "exclude_matches": ["https://peakd.com/*/wallet"],
+      "js": ["content.js"]
+    }
+  ]
+}
